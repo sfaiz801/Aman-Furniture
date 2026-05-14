@@ -1,0 +1,132 @@
+// ============================================
+// Floating Buttons
+// ============================================
+
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.floating-whatsapp {
+  position: fixed;
+  bottom: 90px;
+  right: $space-4;
+  z-index: $z-floating;
+
+  @include desktop {
+    bottom: $space-8;
+    right: $space-8;
+  }
+
+  .btn-floating {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #25D366;
+    color: $color-white;
+    @include flex-center;
+    box-shadow: 0 4px 12px rgba(#25D366, 0.4);
+    transition: all $transition-base;
+    position: relative;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(#25D366, 0.6);
+    }
+
+    .pulse-ring {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid #25D366;
+      animation: weddingPulse 2s infinite;
+    }
+  }
+}
+
+.floating-call {
+  position: fixed;
+  bottom: 160px;
+  right: $space-4;
+  z-index: $z-floating;
+
+  @include desktop {
+    bottom: $space-8;
+    right: 100px;
+  }
+
+  .btn-floating {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: $gradient-premium;
+    color: $color-white;
+    @include flex-center;
+    box-shadow: $shadow-lg;
+    transition: all $transition-base;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: $space-4;
+  right: $space-4;
+  z-index: $z-floating;
+
+  @include desktop {
+    bottom: $space-8;
+    right: $space-8;
+  }
+
+  .btn-scroll {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: $color-gold;
+    color: $color-dark-brown;
+    @include flex-center;
+    box-shadow: $shadow-md;
+    transition: all $transition-base;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    &:hover {
+      background: $color-gold-dark;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// Sticky Mobile Bottom Bar
+.mobile-sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-fixed;
+  background: $color-white;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  padding: $space-3 $space-4;
+  display: flex;
+  gap: $space-3;
+
+  @include desktop {
+    display: none;
+  }
+
+  .btn {
+    flex: 1;
+    justify-content: center;
+    padding: $space-3;
+    font-size: $font-size-sm;
+  }
+}

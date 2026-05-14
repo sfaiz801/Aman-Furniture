@@ -1,0 +1,168 @@
+// ============================================
+// Hero Section
+// ============================================
+
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  @include flex-center;
+  overflow: hidden;
+  background: linear-gradient(135deg, $color-maroon-dark 0%, $color-dark-brown 50%, $color-maroon 100%);
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+    }
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba($color-dark-brown, 0.7), rgba($color-maroon, 0.8));
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: $space-8 $space-4;
+    max-width: 900px;
+    margin: 0 auto;
+
+    @include desktop {
+      padding: $space-12;
+    }
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-2;
+    background: rgba($color-gold, 0.2);
+    border: 1px solid rgba($color-gold, 0.4);
+    color: $color-gold;
+    padding: $space-2 $space-4;
+    border-radius: $radius-full;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $space-6;
+    backdrop-filter: blur(10px);
+
+    svg {
+      animation: bounce 1s infinite;
+    }
+  }
+
+  h1 {
+    color: $color-white;
+    margin-bottom: $space-4;
+    text-shadow: 2px 2px 4px rgba($color-dark-brown, 0.3);
+
+    .highlight {
+      color: $color-gold;
+      @include gradient-text($gradient-gold);
+    }
+  }
+
+  .hero-subtitle {
+    color: rgba($color-white, 0.9);
+    font-size: $font-size-md;
+    margin-bottom: $space-8;
+
+    @include desktop {
+      font-size: $font-size-lg;
+    }
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    justify-content: center;
+    align-items: center;
+
+    @include desktop {
+      flex-direction: row;
+      gap: $space-4;
+    }
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-6;
+    margin-top: $space-12;
+
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .stat-item {
+      text-align: center;
+
+      .stat-number {
+        font-size: $font-size-2xl;
+        font-weight: $font-weight-extrabold;
+        color: $color-gold;
+
+        @include desktop {
+          font-size: $font-size-3xl;
+        }
+      }
+
+      .stat-label {
+        font-size: $font-size-sm;
+        color: rgba($color-white, 0.8);
+        margin-top: $space-1;
+      }
+    }
+  }
+}
+
+// Floating Shapes
+.hero-shapes {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+
+  .shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba($color-gold, 0.1);
+
+    &:nth-child(1) {
+      width: 300px;
+      height: 300px;
+      top: -100px;
+      left: -100px;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    &:nth-child(2) {
+      width: 200px;
+      height: 200px;
+      bottom: 10%;
+      right: -50px;
+      animation: float 8s ease-in-out infinite reverse;
+    }
+
+    &:nth-child(3) {
+      width: 150px;
+      height: 150px;
+      top: 40%;
+      left: 10%;
+      animation: float 7s ease-in-out infinite;
+      background: rgba($color-white, 0.05);
+    }
+  }
+}

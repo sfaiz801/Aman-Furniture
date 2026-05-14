@@ -1,0 +1,58 @@
+export const categories = [
+  {
+    id: 1,
+    name: "Beds",
+    description: "Box Bed, King Size, Double Bed",
+    image: "/images/cat-bed.jpg",
+    link: "#beds",
+  },
+  {
+    id: 2,
+    name: "Sofa Sets",
+    description: "3+1+1, Corner Sofa, Modern Designs",
+    image: "/images/cat-sofa.jpg",
+    link: "#sofa",
+  },
+  {
+    id: 3,
+    name: "Almari",
+    description: "Steel & Wooden Wardrobes",
+    image: "/images/cat-almari.jpg",
+    link: "#almari",
+  },
+  {
+    id: 4,
+    name: "Dressing Table",
+    description: "Premium Mirror & Storage",
+    image: "/images/cat-dressing.jpg",
+    link: "#dressing",
+  },
+  {
+    id: 5,
+    name: "Electronics",
+    description: "TV, Fridge, Cooler & More",
+    image: "/images/cat-electronics.jpg",
+    link: "#electronics",
+  },
+  {
+    id: 6,
+    name: "Chairs",
+    description: "Steel, Plastic & Wooden Chairs",
+    image: "/images/cat-chairs.jpg",
+    link: "#chairs",
+  },
+  {
+    id: 7,
+    name: "Tables",
+    description: "Tea Table, Dining, Folding",
+    image: "/images/cat-tables.jpg",
+    link: "#tables",
+  },
+  {
+    id: 8,
+    name: "Wedding Packages",
+    description: "Complete Shaadi Furniture Set",
+    image: "/images/cat-wedding.jpg",
+    link: "#wedding",
+  },
+];

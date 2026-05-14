@@ -1,0 +1,38 @@
+// ============================================
+// Main SCSS Entry File
+// National Furniture & Electronics
+// ============================================
+
+// Abstracts
+@import './abstracts/variables';
+@import './abstracts/mixins';
+@import './abstracts/animations';
+
+// Base
+@import './base/reset';
+@import './base/typography';
+@import './base/global';
+
+// Components
+@import './components/navbar';
+@import './components/hero';
+@import './components/offer-card';
+@import './components/category-card';
+@import './components/testimonial-card';
+@import './components/floating-buttons';
+@import './components/loader';
+
+// Sections
+@import './sections/wedding-banner';
+@import './sections/offers';
+@import './sections/categories';
+@import './sections/why-choose-us';
+@import './sections/factory';
+@import './sections/gallery';
+@import './sections/testimonials';
+@import './sections/trust';
+@import './sections/contact';
+@import './sections/footer';
+
+// Bootstrap 5 Grid & Utilities (optional overrides)
+// Note: Bootstrap CSS is imported in _app.js

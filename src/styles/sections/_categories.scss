@@ -1,0 +1,11 @@
+// ============================================
+// Categories Section
+// ============================================
+
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.categories-section {
+  background: $color-white;
+  @include section-padding;
+}

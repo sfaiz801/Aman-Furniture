@@ -1,0 +1,76 @@
+// ============================================
+// Testimonial Card
+// ============================================
+
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.testimonial-card {
+  @include glass;
+  border-radius: $radius-2xl;
+  padding: $space-4;
+  @include desktop {
+    padding: $space-8;
+  }
+  text-align: center;
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-xl;
+  }
+
+  .testimonial-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto $space-4;
+    border: 3px solid $color-gold;
+    box-shadow: $shadow-gold;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .testimonial-rating {
+    display: flex;
+    justify-content: center;
+    gap: $space-1;
+    margin-bottom: $space-4;
+    color: $color-gold;
+  }
+
+  .testimonial-text {
+    font-size: $font-size-md;
+    font-style: italic;
+    color: $color-text;
+    margin-bottom: $space-4;
+    line-height: $line-height-relaxed;
+
+    &::before {
+      content: '"';
+      font-size: $font-size-3xl;
+      color: $color-gold;
+      line-height: 0;
+      vertical-align: middle;
+      margin-right: $space-1;
+    }
+  }
+
+  .testimonial-author {
+    h4 {
+      font-size: $font-size-md;
+      color: $color-dark-brown;
+      margin-bottom: $space-1;
+    }
+
+    p {
+      font-size: $font-size-sm;
+      color: $color-text-muted;
+    }
+  }
+}

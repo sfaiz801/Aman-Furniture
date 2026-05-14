@@ -1,0 +1,192 @@
+// ============================================
+// Global Utilities & Classes
+// ============================================
+
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.container-custom {
+  @include container;
+}
+
+.section-padding {
+  @include section-padding;
+}
+
+.bg-cream {
+  background-color: $color-cream;
+}
+
+.bg-maroon {
+  background: $gradient-premium;
+  color: $color-white;
+}
+
+.bg-gold {
+  background: $gradient-gold;
+  color: $color-dark-brown;
+}
+
+.bg-wood {
+  background-color: $color-wood-bg;
+}
+
+.text-white {
+  color: $color-white;
+}
+
+.glass-card {
+  @include glass;
+  border-radius: $radius-xl;
+  padding: $space-6;
+}
+
+.glass-card-dark {
+  @include glass-dark;
+  border-radius: $radius-xl;
+  padding: $space-6;
+  color: $color-white;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.relative {
+  position: relative;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.z-10 {
+  position: relative;
+  z-index: 10;
+}
+
+// Premium Button Styles
+.btn-premium {
+  @include btn-base;
+  background: $gradient-premium;
+  color: $color-white;
+  box-shadow: $shadow-md;
+
+  &:hover {
+    background: linear-gradient(135deg, $color-maroon-dark 0%, $color-maroon 100%);
+    box-shadow: $shadow-lg;
+    color: $color-white;
+  }
+}
+
+.btn-gold {
+  @include btn-base;
+  background: $gradient-gold;
+  color: $color-dark-brown;
+  box-shadow: $shadow-md;
+
+  &:hover {
+    background: linear-gradient(135deg, $color-gold-dark 0%, $color-gold 100%);
+    box-shadow: $shadow-lg;
+    color: $color-dark-brown;
+  }
+}
+
+.btn-outline {
+  @include btn-base;
+  background: transparent;
+  color: $color-maroon;
+  border: 2px solid $color-maroon;
+
+  &:hover {
+    background: $color-maroon;
+    color: $color-white;
+  }
+}
+
+.btn-white {
+  @include btn-base;
+  background: $color-white;
+  color: $color-maroon;
+
+  &:hover {
+    background: $color-cream;
+    color: $color-maroon-dark;
+  }
+}
+
+.btn-whatsapp {
+  @include btn-base;
+  background-color: #25D366;
+  color: $color-white;
+
+  &:hover {
+    background-color: #128C7E;
+    color: $color-white;
+  }
+}
+
+.btn-call {
+  @include btn-base;
+  background-color: $color-success;
+  color: $color-white;
+
+  &:hover {
+    background-color: #1B5E20;
+    color: $color-white;
+  }
+}
+
+// Badge Styles
+.badge-premium {
+  display: inline-block;
+  padding: $space-1 $space-3;
+  background: $gradient-gold;
+  color: $color-dark-brown;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+  border-radius: $radius-full;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-maroon {
+  display: inline-block;
+  padding: $space-1 $space-3;
+  background: $gradient-premium;
+  color: $color-white;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+  border-radius: $radius-full;
+}
+
+// Section Title
+.section-title {
+  text-align: center;
+  margin-bottom: $space-10;
+
+  .subtitle {
+    display: inline-block;
+    color: $color-maroon;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: $space-2;
+  }
+
+  h2 {
+    color: $color-dark-brown;
+    margin-bottom: $space-3;
+  }
+
+  .underline {
+    width: 80px;
+    height: 4px;
+    background: $gradient-gold;
+    border-radius: $radius-full;
+    margin: 0 auto;
+  }
+}

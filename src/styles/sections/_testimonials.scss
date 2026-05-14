@@ -1,0 +1,35 @@
+// ============================================
+// Testimonials Section
+// ============================================
+
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.testimonials-section {
+  background: linear-gradient(135deg, $color-maroon 0%, $color-dark-brown 100%);
+  @include section-padding;
+
+  .section-title {
+    h2 {
+      color: $color-white;
+    }
+
+    .subtitle {
+      color: $color-gold;
+    }
+
+    .underline {
+      background: $gradient-gold;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background: rgba($color-white, 0.5);
+
+    &-active {
+      background: $color-gold;
+      width: 24px;
+      border-radius: $radius-full;
+    }
+  }
+}

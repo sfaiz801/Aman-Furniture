@@ -1,0 +1,148 @@
+// ============================================
+// Gallery Section
+// ============================================
+
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.gallery-section {
+  background: $color-off-white;
+  @include section-padding;
+
+  .gallery-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $space-2;
+    margin-bottom: $space-8;
+
+    .filter-btn {
+      padding: $space-2 $space-5;
+      border-radius: $radius-full;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-medium;
+      background: $color-white;
+      color: $color-text;
+      border: 1px solid $color-light-wood;
+      transition: all $transition-base;
+
+      &:hover,
+      &.active {
+        background: $gradient-premium;
+        color: $color-white;
+        border-color: $color-maroon;
+      }
+    }
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-3;
+
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+      gap: $space-4;
+    }
+  }
+
+  .gallery-item {
+    position: relative;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 1;
+
+    @include desktop {
+      aspect-ratio: auto;
+
+      &.tall {
+        grid-row: span 2;
+      }
+
+      &.wide {
+        grid-column: span 2;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform $transition-slow;
+    }
+
+    &:hover img {
+      transform: scale(1.15);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba($color-dark-brown, 0.9), transparent);
+      opacity: 0;
+      transition: opacity $transition-base;
+      @include flex-center;
+      flex-direction: column;
+      padding: $space-4;
+
+      h4 {
+        color: $color-white;
+        font-size: $font-size-md;
+        transform: translateY(20px);
+        transition: transform $transition-base;
+      }
+
+      p {
+        color: $color-gold;
+        font-size: $font-size-sm;
+        transform: translateY(20px);
+        transition: transform $transition-base 0.1s;
+      }
+    }
+
+    &:hover .gallery-overlay {
+      opacity: 1;
+
+      h4, p {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+// Lightbox
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba($color-dark-brown, 0.95);
+  z-index: $z-modal;
+  @include flex-center;
+  padding: $space-4;
+
+  .lightbox-content {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: $radius-lg;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      color: $color-white;
+      font-size: $font-size-xl;
+      cursor: pointer;
+      transition: color $transition-base;
+
+      &:hover {
+        color: $color-gold;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+export const testimonials = [
+  {
+    id: 1,
+    name: "Ramesh Kumar",
+    location: "Mirganj, Bihar",
+    rating: 5,
+    text: "Shaadi ke liye furniture liya. Bahut accha quality aur price bhi best. Family ko bohut pasand aaya!",
+    image: "/images/user1.jpg",
+  },
+  {
+    id: 2,
+    name: "Sunita Devi",
+    location: "Gopalganj",
+    rating: 5,
+    text: "Pura home setup karaya. Delivery time pe mila aur furniture solid hai. National Furniture se hi lenge hamesha.",
+    image: "/images/user2.jpg",
+  },
+  {
+    id: 3,
+    name: "Amit Singh",
+    location: "Hathua",
+    rating: 4,
+    text: "Factory price mein showroom quality. Bihar mein itna accha furniture kahi nahi mila. Highly recommended!",
+    image: "/images/user3.jpg",
+  },
+  {
+    id: 4,
+    name: "Priya Sharma",
+    location: "Barwa",
+    rating: 5,
+    text: "Wedding combo offer best tha. Pura set ek jagah se mil gaya. Bina tension ke shaadi ka samaan complete.",
+    image: "/images/user4.jpg",
+  },
+  {
+    id: 5,
+    name: "Vijay Yadav",
+    location: "Mirganj",
+    rating: 5,
+    text: "Electronics aur furniture dono yahan se liya. Bhaiya bahut achhe hain, guidance bhi diye. Dhanyawad!",
+    image: "/images/user5.jpg",
+  },
+];

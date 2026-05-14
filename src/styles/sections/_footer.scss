@@ -1,0 +1,127 @@
+// ============================================
+// Footer
+// ============================================
+
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.footer {
+  background: $color-dark-brown;
+  color: $color-white;
+  padding-top: $space-16;
+  padding-bottom: 80px; // Extra padding for mobile sticky bar
+
+  @include desktop {
+    padding-bottom: $space-6;
+  }
+
+  .footer-brand {
+    .footer-logo {
+      font-size: $font-size-xl;
+      font-weight: $font-weight-bold;
+      color: $color-white;
+      margin-bottom: $space-4;
+
+      span {
+        color: $color-gold;
+      }
+    }
+
+    p {
+      color: rgba($color-white, 0.7);
+      font-size: $font-size-sm;
+      margin-bottom: $space-4;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: $space-3;
+
+      a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba($color-white, 0.1);
+        color: $color-white;
+        @include flex-center;
+        transition: all $transition-base;
+
+        &:hover {
+          background: $color-gold;
+          color: $color-dark-brown;
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+
+  .footer-links {
+    h4 {
+      color: $color-gold;
+      font-size: $font-size-md;
+      margin-bottom: $space-4;
+    }
+
+    ul {
+      li {
+        margin-bottom: $space-2;
+
+        a {
+          color: rgba($color-white, 0.7);
+          font-size: $font-size-sm;
+          transition: all $transition-base;
+          display: inline-flex;
+          align-items: center;
+          gap: $space-2;
+
+          &:hover {
+            color: $color-gold;
+            padding-left: $space-2;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-contact {
+    h4 {
+      color: $color-gold;
+      font-size: $font-size-md;
+      margin-bottom: $space-4;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: $space-3;
+      margin-bottom: $space-3;
+      font-size: $font-size-sm;
+      color: rgba($color-white, 0.7);
+
+      svg {
+        color: $color-gold;
+        margin-top: 3px;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: $space-12;
+    padding-top: $space-6;
+    border-top: 1px solid rgba($color-white, 0.1);
+    text-align: center;
+
+    p {
+      color: rgba($color-white, 0.6);
+      font-size: $font-size-sm;
+      margin-bottom: $space-2;
+    }
+
+    .footer-timing {
+      color: $color-gold;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-medium;
+    }
+  }
+}

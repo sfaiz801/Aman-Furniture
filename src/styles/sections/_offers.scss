@@ -1,0 +1,11 @@
+// ============================================
+// Offers Section
+// ============================================
+
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.offers-section {
+  background: $gradient-cream;
+  @include section-padding;
+}

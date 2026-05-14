@@ -1,0 +1,151 @@
+// ============================================
+// Offer Card
+// ============================================
+
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.offer-card {
+  position: relative;
+  background: $color-white;
+  border-radius: $radius-2xl;
+  overflow: hidden;
+  box-shadow: $shadow-lg;
+  transition: all $transition-base;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  @include shine;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: $shadow-premium;
+  }
+
+  .offer-ribbon {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    transform: rotate(45deg);
+    background: $gradient-gold;
+    color: $color-dark-brown;
+    padding: $space-1 $space-8;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    z-index: 5;
+    box-shadow: $shadow-md;
+  }
+
+  .offer-badge {
+    position: absolute;
+    top: $space-4;
+    left: $space-4;
+    z-index: 5;
+  }
+
+  .offer-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform $transition-slow;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+
+    .offer-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba($color-dark-brown, 0.8), transparent);
+    }
+  }
+
+  .offer-content {
+    padding: $space-6;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .offer-title {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: $color-dark-brown;
+    margin-bottom: $space-4;
+  }
+
+  .offer-items {
+    margin-bottom: $space-4;
+
+    .offer-item {
+      display: flex;
+      align-items: center;
+      gap: $space-2;
+      padding: $space-1 0;
+      font-size: $font-size-sm;
+      color: $color-text-light;
+      border-bottom: 1px dashed $color-light-wood;
+
+      svg {
+        color: $color-maroon;
+        flex-shrink: 0;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .offer-pricing {
+    margin-top: auto;
+    display: flex;
+    align-items: baseline;
+    gap: $space-3;
+    margin-bottom: $space-4;
+    padding: $space-3;
+    background: $color-cream;
+    border-radius: $radius-lg;
+
+    .offer-price {
+      font-size: $font-size-2xl;
+      font-weight: $font-weight-extrabold;
+      color: $color-maroon;
+    }
+
+    .market-price {
+      font-size: $font-size-md;
+      color: $color-text-muted;
+      text-decoration: line-through;
+    }
+
+    .save-text {
+      font-size: $font-size-sm;
+      color: $color-success;
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  .offer-actions {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+
+    @include desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      flex: 1;
+      min-width: 120px;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+// ============================================
+// Trust Section (Counters)
+// ============================================
+
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.trust-section {
+  background: $gradient-premium;
+  padding: $space-12 $space-4;
+
+  @include desktop {
+    padding: $space-16 $space-8;
+  }
+
+  .counter-card {
+    text-align: center;
+    color: $color-white;
+    padding: $space-4;
+
+    .counter-icon {
+      font-size: $font-size-2xl;
+      color: $color-gold;
+      margin-bottom: $space-3;
+    }
+
+    .counter-number {
+      font-size: $font-size-2xl;
+      font-weight: $font-weight-extrabold;
+      color: $color-gold;
+      margin-bottom: $space-2;
+
+      @include desktop {
+        font-size: $font-size-4xl;
+      }
+    }
+
+    .counter-label {
+      font-size: $font-size-sm;
+      color: rgba($color-white, 0.9);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+}
